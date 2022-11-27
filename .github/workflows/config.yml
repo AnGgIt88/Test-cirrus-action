@@ -1,0 +1,32 @@
+name: Test Deploy
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout..
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # otherwise, you will failed to push refs to dest repo
+          persist-credentials: false  # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+
+      - name: Cleanup..
+        uses: rokibhasansagar/slimhub_actions@main
+
+      - name: Install cirrus..
+        run: |
+          curl -L -o cirrus https://github.com/cirruslabs/cirrus-cli/releases/latest/download/cirrus-linux-amd64
+          sudo mv cirrus /usr/local/bin/cirrus
+          sudo chmod +x /usr/local/bin/cirrus
+
+      - name: Running..
+        run: |
+          cirrus worker run --token $TOKEN_CI --name ZenBook-UX5401
+        env:
+         TOKEN_CI: ${{secrets.TOKEN_CI}}
