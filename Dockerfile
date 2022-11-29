@@ -8,4 +8,4 @@ RUN git clone --depth 1 https://github.com/AnGgIt88/Test-cirrus-action /home/nfs
     && chmod 777 /home/nfs-project
 
 WORKDIR /home/nfs-project
-CMD [ "bash", "start" ]
+CMD [ "start" ]
