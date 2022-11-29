@@ -14,4 +14,4 @@ COPY . .
 
 WORKDIR /tmp
 VOLUME ["/tmp/rom", "/tmp/ccache"]
-CMD [ "bash", "start" ]
+CMD [ "cirrus worker run --token $TOKEN_CI --name ZenBook-UX5401" ]
