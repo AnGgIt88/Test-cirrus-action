@@ -18,7 +18,7 @@ jobs:
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "nfs-storage"
-          email: "jarbull002@gmail.com"
+          heroku_email: "jarbull002@gmail.com"
           usedocker: true
         env:
           TOKEN_CI: ${{secrets.TOKEN_CI}}
