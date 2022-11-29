@@ -13,7 +13,7 @@ WORKDIR /tmp
 
 RUN apt-get -yqq update \
     && curl -L -o cirrus https://github.com/cirruslabs/cirrus-cli/releases/latest/download/cirrus-linux-amd64 \
-    && mv cirrus /usr/local/bin/cirrus
+    && mv cirrus /usr/local/bin/cirrus \
     && chmod +x /usr/local/bin/cirrus
 
 COPY . .
