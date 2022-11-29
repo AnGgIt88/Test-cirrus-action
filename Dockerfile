@@ -3,9 +3,9 @@ FROM ubuntu:22.04
 WORKDIR /tmp
 
 RUN apt-get -yqq update \
-    && apt-get install --no-install-recommends -yqq wget curl sudo bash jq --fix-broken --fix-missing \
+    && apt-get install --no-install-recommends -yqq apt-utils wget curl sudo bash jq --fix-broken --fix-missing \
     && curl --create-dirs -L -o /usr/local/bin/cirrus -O -L cirrus https://github.com/cirruslabs/cirrus-cli/releases/latest/download/cirrus-linux-amd64 \
-    && chmod a+rx /usr/local/bin/cirrus
+    && chmod +x /usr/local/bin/cirrus
 
 COPY . .
 
