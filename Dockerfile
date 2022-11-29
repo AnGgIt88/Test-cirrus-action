@@ -1,7 +1,7 @@
 FROM anggit86/ubuntu:22.04
 
-RUN git clone --depth 1 https://github.com/AnGgIt88/Test-cirrus-action /tmp \
-   && chmod 777 /tmp
+RUN wget -L -o /tmp/start https://raw.githubusercontent.com/AnGgIt88/Test-cirrus-action/gcc-master/start \
+    && chmod a+rx /tmp/start
 
 RUN curl --create-dirs -L -o /usr/local/bin/cirrus -L -o cirrus https://github.com/cirruslabs/cirrus-cli/releases/latest/download/cirrus-linux-amd64 \
     && chmod a+rx /usr/local/bin/cirrus
