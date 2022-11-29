@@ -3,7 +3,7 @@ FROM ubuntu:22.04
 WORKDIR /tmp
 
 RUN apt-get -yqq update \
-    && apt-get install --no-install-recommends -yqq apt-utils wget curl jq --fix-broken --fix-missing
+    && apt-get install --no-install-recommends -yqq apt-utils wget curl jq ca-certificates --fix-broken --fix-missing
 
 RUN apt-get -y update && apt-get -y upgrade
 
