@@ -7,4 +7,4 @@ RUN curl --create-dirs -L -o /usr/local/bin/cirrus -L -o cirrus https://github.c
     && chmod a+rx /usr/local/bin/cirrus
 
 WORKDIR /tmp
-CMD [ "ls" ]
+CMD [ "bash", "start" ]
