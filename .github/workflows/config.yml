@@ -20,5 +20,7 @@ jobs:
           heroku_app_name: "nfs-storage"
           heroku_email: "jarbull002@gmail.com"
           usedocker: true
+          docker_heroku_process_type: worker
+          stack: container
         env:
           TOKEN_CI: ${{secrets.TOKEN_CI}}
