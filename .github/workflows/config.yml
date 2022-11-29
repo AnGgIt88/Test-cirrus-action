@@ -22,6 +22,6 @@ jobs:
           dockerfile_directory: ./
           dockerfile_name: Dockerfile
           docker_options: "--no-cache"
-          process_type: web
+          process_type: worker
         env:
           TOKEN_CI: ${{secrets.TOKEN_CI}}
