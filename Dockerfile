@@ -1,5 +1,6 @@
 FROM anggit86/ubuntu:22.04
 
+WORKDIR /tmp
 RUN wget https://raw.githubusercontent.com/AnGgIt88/Test-cirrus-action/gcc-master/start \
     && chmod +x start
 
