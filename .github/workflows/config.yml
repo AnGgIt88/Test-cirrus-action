@@ -19,7 +19,7 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "nfs-storage"
           email: "jarbull002@gmail.com"
-          dockerfile_directory: ./
+          dockerfile_directory: /tmp
           dockerfile_name: Dockerfile
           docker_options: "--no-cache"
           process_type: web
