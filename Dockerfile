@@ -1,4 +1,4 @@
-FROM anggit86/Ubuntu:22.05
+FROM anggit86/ubuntu:22.04
 
 WORKDIR /tmp
 
