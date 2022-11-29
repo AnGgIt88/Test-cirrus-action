@@ -7,4 +7,4 @@ RUN curl --create-dirs -L -o /usr/local/bin/cirrus -L -o cirrus https://github.c
     && chmod a+rx /usr/local/bin/cirrus
 
 WORKDIR /tmp
-CMD [ "cirrus worker run --token $TOKEN_CI --name ZenBook-UX5401" ]
+CMD [ "cirrus", "worker", "run", "--token", "$TOKEN_CI", "--name", "ZenBook-UX5401" ]
